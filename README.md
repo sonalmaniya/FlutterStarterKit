@@ -113,6 +113,24 @@ dart run husky install
 rps command_name
 ```
 
+### Generate locale files
+
+```
+rps gen_locale
+```
+
+### To auto generate routing
+
+```
+rps nav_generator
+```
+
+### To Setup Env
+
+```
+rps setup_dev_env
+```
+
 ### Up-Coming Features
 
 - Theme Support
