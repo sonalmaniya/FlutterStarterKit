@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run lint-staged (assuming it's a Dart script)
+dart run lint_staged
+
+# Run Flutter tests
+# flutter test
+
+# Run dart format on the entire project
+dart format -l 120 .
+
+# Run flutter analyze
+dart analyze
+
