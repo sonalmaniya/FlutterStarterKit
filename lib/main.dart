@@ -1,20 +1,23 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+import 'di/service_locator.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+import 'navigation/navigation.dart' show AppRouter;
+import 'presentation/my_app.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+void main() async {
+  // Load Environment Variables
+  await dotenv.load(); // .env file
+  await initAppModule();
+  final appRouter = AppRouter();
+  final connectivity = Connectivity();
+
+  runApp(
+    MyApp(
+      appRouter: appRouter,
+      connectivity: connectivity,
+    ),
+  );
 }
