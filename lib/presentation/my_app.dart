@@ -2,7 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../l10n/l10n.dart';
+import '../l10n/app_localizations.dart';
 import '../navigation/navigation.dart';
 import 'common/internet/cubit/internet_cubit.dart';
 import 'common/locale/bloc/language_bloc.dart';
