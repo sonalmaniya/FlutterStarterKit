@@ -23,11 +23,13 @@ dependencies:
 
 dev_dependencies:
   auto_route_generator: ^8.0.0
+  bloc_test: ^9.1.7
   build_runner: ^2.4.9
   flutter_test:
     sdk: flutter
   husky: ^0.1.7
   lint_staged: ^0.5.1
+  mocktail: ^1.0.4
   very_good_analysis: ^5.1.0
 
 flutter:
